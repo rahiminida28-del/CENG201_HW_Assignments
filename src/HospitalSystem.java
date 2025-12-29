@@ -45,7 +45,7 @@ public class HospitalSystem {
 
     }
     public  void displayState(){
-        System.out.println("/n-- System Status--");
+        System.out.println("\n-- System Status--");
         System.out.println("Emergency waitimg :" + emergencyTreatmentQueue.size());
         System.out.println("NormalWaitimg :" + normalTreatmentQueue.size());
         System.out.println(" number of Discharged patient:"+(dischargedStack.peek()!=null? "kayitli" : "dont have"));

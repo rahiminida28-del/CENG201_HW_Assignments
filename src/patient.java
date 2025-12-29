@@ -14,7 +14,7 @@ public class patient {
     }
     // I am using this method to read all thing  clearly
 
-    public String PatientInfo() {
-        return "ID: " + id + ", Name: " + name + ", Sickness: " + sickness + ", Age: " + age;
+    public String toString() {
+        return "ID: " + this.id + ", Name: " + this.name + ", Sickness: " + this.sickness + ", Age: " + this.age;
     }
     }

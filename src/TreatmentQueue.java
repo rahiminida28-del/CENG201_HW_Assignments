@@ -44,7 +44,7 @@ public class TreatmentQueue {   //
     public void printQueue(){ //it'll be listed all req
         Node current = front; //
         while(current!=null){
-            System.out.println(current); //inside node yazdir
+            System.out.println(current.req.toString()); //inside node yazdir
             current = current.next; //go in nxt node till empty
 
         }

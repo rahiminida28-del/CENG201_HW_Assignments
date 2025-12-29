@@ -62,11 +62,11 @@ public class Main {
                 //hocam bazi kelimelerin ve cumleleri o an ingilizceye ceviremedigim icin turkce yazdim netten bakip
                 //cevirmek istemedim ne kadar biliyorsam o kadarini yapmaya calistim
             }
-            System.out.println("/nIslem patient remaining aster Q (Size: "+tkuyruk.size()+")");
+            System.out.println("\nIslem patient remaining aster Q (Size: "+tkuyruk.size()+")");
             //remaining Q print
             tkuyruk.printQueue();
         }
-        System.out.println("/n/n== Discharge Record =="); //3 task stack
+        System.out.println("\n\n== Discharge Record =="); //3 task stack
         DischargedStack discharged = new DischargedStack(); //2 discharged recorad
         dStack.push(new DischargedRecord(101, "10:40"));
         dStack.push(new DischargedRecord(102, "1:43"));
@@ -77,10 +77,10 @@ public class Main {
         System.out.println(" last 2 discharged recoad being processed (pop)");
         System.out.println("Delete" +dStack.pop());
         System.out.println(" Delete" +dStack.pop());
-        System.out.println("/nRemaining Discharge Record ==");
+        System.out.println("\nRemaining Discharge Record ==");
         dStack.printStack();
 
-        System.out.println("/n/n===="); //final test
+        System.out.println("\n\n===="); //final test
         System.out.println("integrated system starting");
         System.out.println("==");
         HospitalSystem hospitalSystem = new HospitalSystem();
@@ -97,20 +97,20 @@ public class Main {
         hospitalSystem.registerPatient(new patient(109,"Mehmet Oz ",6,65));
         hospitalSystem.registerPatient(new patient(110,"Fatma Veli",1,39));
 
-        System.out.println("/nTedavi talepleri kuyruga ekleniyor.."); //Q of patient who is emergency and who is normal
+        System.out.println("\nTedavi talepleri kuyruga ekleniyor.."); //Q of patient who is emergency and who is normal
         hospitalSystem.addReq(new TreatmentRequest(101,false)); //normal
         hospitalSystem.addReq(new TreatmentRequest((102),true)); //acil hasta siddet 9
         hospitalSystem.addReq(new TreatmentRequest((103),true)); //emergency patient fever is 10
         hospitalSystem.addReq(new TreatmentRequest((104),true)); //emergency patient fever is 9
         hospitalSystem.addReq(new TreatmentRequest((105),false)); //normal
 
-        System.out.println("/n--Tedavi Isleniyor (Oncelik Sirasina Gore) ---"); //firts emergency patient will be treat
+        System.out.println("\n--Tedavi Isleniyor (Oncelik Sirasina Gore) ---"); //firts emergency patient will be treat
         for (int  i =0; i<3; i++) {
             hospitalSystem.TreatmentProcess();
 
         }
         hospitalSystem.displayState(); //Sistem Durumunu Görüntüle
-        System.out.println("/n--- Patient will Q by fever-- ");
+        System.out.println("\n--- Patient will Q by fever-- ");
         hospitalSystem.allPatient.sortBySickness(); //patient icindeki method
         hospitalSystem.allPatient.printPatientList();
 

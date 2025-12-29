@@ -12,9 +12,9 @@ public class DischargedRecord {  //bu benim stack classm burda
     public DischargedRecord(int patientid, String time) {
     }
 
-    public String patientInfoFormat()
+    public String toString()
     {
-        return  "Id: "+patientid+"\n"+"Date: "+dischargedTime+"\n";
+        return  "Discharged Patient ID:" + this.patientid + " Discharged Time:" + this.dischargedTime;
 
     }
 }

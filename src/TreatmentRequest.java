@@ -13,9 +13,8 @@ public class TreatmentRequest {
         //system will take time in millis
     }
 
-    public String PatientTreatmentTime() {
-        String type = isPriority ? "Emergency" : "Normal";
-        return "TreatmentRequest(" + patientId + ", " + arrivalTime + ")";
+    public String toString() {
+        return "patient ID: " + patientId +  (isPriority ? " [Emergency]" : " [Normal]");
 
     }
  public TreatmentRequest(int patientId, long arrivalTime, String patient) {
