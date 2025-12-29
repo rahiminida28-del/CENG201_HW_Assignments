@@ -22,19 +22,19 @@ public class patientList {
     }
 
     //yeni hasta eklemek icin
-    public void addPatient(patient data) {
-        Node newNode = new Node(data);
+    public void addPatient(patient p) {
+        Node newNode = new Node(p);
         if (head == null) {
             head = newNode;
 
         } else {
-            head.next = newNode;
-            while (head.next.next != null) {
-                head = head.next;
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
 
 
             }
-            head.next = newNode;
+            current.next = newNode;
         }
     }
 
@@ -57,9 +57,9 @@ public class patientList {
 
     public patient findPatient(int id) { //id gore hastayi bulma
         Node current = head;
-        while (current.next != null) {
-            if (current.next.data.id == id) {
-                return (patient) current.data; // Hastayı bulursa döndürür
+        while (current!= null) {
+            if (current.data.id == id){
+                return  current.data; // Hastayı bulursa döndürür
 
             }
             current = current.next;
@@ -70,11 +70,13 @@ public class patientList {
     public void printPatientList() {
         Node current = head;
         if (current == null) {
-            System.out.println("No patient found");
+            System.out.println("patient not found");
+            return;
+
 
         }
-        while (current.next != null) {
-            System.out.println(current.data);
+        while (current != null) {
+            System.out.println(current.data.toString());
             current = current.next;
 
         }
